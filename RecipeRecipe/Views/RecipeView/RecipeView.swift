@@ -27,6 +27,12 @@ struct RecipeView: View {
                                 .font(.headline)
                         }
                     }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Refresh", systemImage: "arrow.clockwise") {
+                            viewModel.getRecipes()
+                            print("refreshed")
+                        }
+                    }
                 }
             }
             .onAppear {
