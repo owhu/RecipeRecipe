@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Recipe: Identifiable, Decodable {
+struct Recipe: Identifiable, Codable {
     let id: String
     let name: String
     let cuisine: String
@@ -22,7 +22,7 @@ struct Recipe: Identifiable, Decodable {
     }
 }
 
-struct RecipeResponse: Decodable {
+struct RecipeResponse: Codable {
     let recipes: [Recipe]
 }
 

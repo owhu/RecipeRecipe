@@ -9,7 +9,14 @@ import SwiftUI
 
 struct EmptyView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image("food-placeholder")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(8)
+                .frame(width: 120, height: 90)
+            Text("Recipe list is empty")
+        }
     }
 }
 

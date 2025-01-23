@@ -13,12 +13,10 @@ struct RecipeCell: View {
     
     var body: some View {
         HStack {
-            Rectangle()
-            // AppetizerRemoteImage(urlString: appetizer.imageURL)
+            RecipeRemoteImageView(urlString: recipe.photo_url_small)
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(8)
                 .frame(width: 120, height: 90)
-                
 
             VStack(alignment: .leading, spacing: 5) {
                 Text(recipe.name)

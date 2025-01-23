@@ -14,30 +14,36 @@ struct RecipeView: View {
     var body: some View {
         ZStack {
             NavigationView {
-                List(viewModel.recipes, id: \.id) { recipe in
-                    RecipeCell(recipe: recipe)
-                }
-//                .navigationTitle("🥘 Recipes")
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        HStack {
-                            Image(systemName: "fork.knife")
-                                .foregroundColor(.yellow)
-                            Text("Recipes")
-                                .font(.headline)
+                if !viewModel.recipes.isEmpty {
+                    List(viewModel.recipes, id: \.id) { recipe in
+                        RecipeCell(recipe: recipe)
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            HStack {
+                                Image(systemName: "fork.knife")
+                                    .foregroundColor(.yellow)
+                                Text("Recipes")
+                                    .font(.headline)
+                            }
+                        }
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button("Refresh", systemImage: "arrow.clockwise") {
+                                viewModel.getRecipes()
+                                print("refreshed")
+                            }
                         }
                     }
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button("Refresh", systemImage: "arrow.clockwise") {
-                            viewModel.getRecipes()
-                            print("refreshed")
-                        }
-                    }
+                } else {
+                    EmptyView()
                 }
             }
-            .onAppear {
+            .task {
                 viewModel.getRecipes()
             }
+        }
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         }
     }
     
