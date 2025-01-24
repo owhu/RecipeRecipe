@@ -17,7 +17,6 @@ struct AlertItem: Identifiable {
 
 enum AlertContext {
     
-    //MARK: - Network Errors
     static let invalidURL       = AlertItem(title: Text("Server Error"),
                                             message: Text("There is an error trying to reach the server. If this persists, please contact support."),
                                             dismissButton: .default(Text("Ok")))
@@ -34,7 +33,7 @@ enum AlertContext {
                                             message: Text("The data received from the server was invalid. Please try again or contact support."),
                                             dismissButton: .default(Text("Ok")))
     
-    static let generalError      = AlertItem(title: Text("Server Error"),
+    static let generalError     = AlertItem(title: Text("Server Error"),
                                             message: Text("Your request could not be completed at this time.  Please check your internet connection and try again later."),
                                             dismissButton: .default(Text("Ok")))
 }

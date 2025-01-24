@@ -20,6 +20,7 @@
 		EE2B040D2D371E450082EB1B /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B040C2D371E450082EB1B /* EmptyView.swift */; };
 		EE2B040F2D37293D0082EB1B /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B040E2D37293D0082EB1B /* AlertItem.swift */; };
 		EE2B04172D3980430082EB1B /* RecipeRecipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B04162D3980430082EB1B /* RecipeRecipeTests.swift */; };
+		EE2B041F2D42FF390082EB1B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B041E2D42FF390082EB1B /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		EE2B040E2D37293D0082EB1B /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		EE2B04142D3980430082EB1B /* RecipeRecipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeRecipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2B04162D3980430082EB1B /* RecipeRecipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRecipeTests.swift; sourceTree = "<group>"; };
+		EE2B041E2D42FF390082EB1B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				EE2B040B2D36FD9A0082EB1B /* RecipeView */,
 				EE233F8D2D122C1B00CC2FF4 /* RecipeCell.swift */,
 				EE2B040C2D371E450082EB1B /* EmptyView.swift */,
+				EE2B041E2D42FF390082EB1B /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				EE2B040A2D35D30E0082EB1B /* RecipeRemoteImageView.swift in Sources */,
 				EE2B040D2D371E450082EB1B /* EmptyView.swift in Sources */,
 				EE233F8C2D122BD400CC2FF4 /* Recipe.swift in Sources */,
+				EE2B041F2D42FF390082EB1B /* LoadingView.swift in Sources */,
 				EE2B040F2D37293D0082EB1B /* AlertItem.swift in Sources */,
 				EE233F922D122C6800CC2FF4 /* REError.swift in Sources */,
 				EE233F7D2D122B4600CC2FF4 /* RecipeView.swift in Sources */,
